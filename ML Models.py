@@ -102,16 +102,3 @@ bare_rf_importances = bare_rf_clf(smote_x_train, smote_y_train, x_test, y_test)
 bare_xtree_importances = bare_xtree_clf(smote_x_train, smote_y_train, x_test, y_test)
 tunned_xgb_importances = tunned_xgb_clf(smote_x_train, smote_y_train, x_test, y_test)
 
-bare_rf_importances_dict = dict(bare_rf_importances)
-bare_xtree_importances_dict = dict(bare_xtree_importances)
-tunned_xgb_importances_dict = dict(tunned_xgb_importances)
-
-def update_and_combine(original_dict, new_dict):
-    for key, value in new_dict.items():
-        if key in original_dict:
-            original_dict[key] += value
-        else:
-            original_dict[key] = value
-
-
-
